@@ -105,7 +105,7 @@ void DfamPanel::handleEvent(const SDL_Event& e) {
 void DfamPanel::draw(SDL_Renderer* renderer) const {
     SDL_SetRenderDrawColor(renderer, kPanelBg.r, kPanelBg.g, kPanelBg.b, kPanelBg.a);
     SDL_RenderFillRect(renderer, &area_);
-    Font::drawText(renderer, originX_ + 30, originY_ + 10, "MOOG-STYLE DFAM VOICE", kText, 2);
+    Font::drawText(renderer, originX_ + 30, originY_ + 10, "MOOG DFAM VOICE", kText, 2);
     for (const auto& k : knobs_) k.draw(renderer);
     for (const auto& l : stepLeds_) l.draw(renderer);
     for (const auto& k : stepPitchKnobs_) k.draw(renderer);
